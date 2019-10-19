@@ -54,9 +54,8 @@ def current_player(board)
 end
 
 def play(board)
-  until over?(board) == true
+  until over?(board) == true || draw?(board) == true
     turn(board)
-    draw?(board)
   end
 
   if won?(board)
